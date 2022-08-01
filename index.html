@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title>Aayush's Portfolio</title>
     <style>
         * {
             font-family: 'Times New Roman', Times, serif;
@@ -26,7 +27,24 @@
             border-radius: 135px;
         }
 
-        .header_info>h1,h2 {
+        .header_navbar {
+            border: 2px rgb(72, 231, 194) solid;
+            border-radius: 10px;
+            background-color: rgb(108, 203, 171);
+            font-size: 25px;
+        }
+        .header_top_icon,.header_skill_icon,.header_project_icon{
+            display: inline-block;
+            margin-left: 5px;
+            font-family:cursive;
+        }
+        .header_top_icon:hover,.header_skill_icon:hover,.header_project_icon:hover{
+            background-color: rgb(0, 249, 166);
+            border-radius: 0px;
+            
+        }
+        .header_info>h1,
+        h2 {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -71,28 +89,8 @@
             margin-bottom: 40px;
         }
 
-        .skill1 {
-            width: 252px;
-            background-image: url('./skillsbg.jpg');
-            border: 2px solid black;
-            border-radius: 70px;
-            display: flex;
-            justify-content: center;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            margin-right: 10px;
-        }
-
-        .skill2 {
-            width: 252px;
-            background-image: url('./skillsbg.jpg');
-            border: 2px solid black;
-            border-radius: 70px;
-            display: flex;
-            justify-content: center;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            margin-right: 10px;
-        }
-
+        .skill1,
+        .skill2,
         .skill3 {
             width: 252px;
             background-image: url('./skillsbg.jpg');
@@ -126,14 +124,63 @@
 
         }
 
-        a>img {
+        .footer_icon {
             height: 30px;
             width: 30px;
         }
 
-        .icon {
+        .skill_icon {
             height: 100px;
             width: 100px;
+        }
+
+        .home_icon {
+            margin-top: 30px;
+        }
+
+        @media only screen and (max-width:500px) {
+
+            .header_info>h1,
+            h2 {
+                font-size: medium;
+            }
+
+            .header_info>h2 {
+                font-size: small;
+            }
+
+            .header_topimg>img {
+                height: 110px;
+                width: 115px;
+                border: 2px solid black;
+                border-radius: 135px;
+            }
+
+            .header_container {
+                margin-bottom: -68px;
+            }
+
+            .context {
+                height: 208px;
+            }
+
+            .skill_icon {
+                height: 40px;
+                width: 40px;
+            }
+
+            a {
+                font-size: 15px;
+            }
+
+            .footer_icon {
+                height: 25px;
+                width: 25px;
+            }
+
+            .home_icon {
+                margin-top: 18px;
+            }
         }
     </style>
 </head>
@@ -142,6 +189,13 @@
     <div class="header_container" id="top">
         <div class="header_topimg">
             <img src="./displaypic.webp" alt="Profile Picture">
+        </div>
+        <div class="header_navbar">
+            <a href="index.html" class="header_top_icon">Home</a>
+            <a href="#skills" class="header_skill_icon">Skills</a>
+            <a href="project1.html" class="header_project_icon" target="_blank">Project1</a>
+            <a href="project2.html" class="header_project_icon" target="_blank">Project2</a>
+            <a href="project3.html" class="header_project_icon" target="_blank">Project3</a>
         </div>
         <div class="header_info">
             <h1>Coder and Front-end Developer</h1>
@@ -157,24 +211,24 @@
 
     </div>
 
-    <div class="skill_container">
+    <div class="skill_container" id="skills">
         <div class="skill1">
-            <img src="./html.png" alt="HTML" class="icon">
+            <img src="./html.png" alt="HTML" class="skill_icon">
         </div>
         <div class="skill2">
-            <img src="./css3.png" alt="CSS" class="icon">
+            <img src="./css3.png" alt="CSS" class="skill_icon">
         </div>
         <div class="skill3">
-            <img src="./java.png" alt="Java" class="icon">
+            <img src="./java.png" alt="Java" class="skill_icon">
         </div>
     </div>
     <div class="footer">
         <address>
             Author@aayushstha <br>
-            <a href="https://github.com/sthaaayush"><img src="./github.png" alt="github"> GitHub</a>
-            <a href="mailto:aayushstha20#gmail.com"><img src="./mail.png" alt="Mail"> Email Me here</a>
-            <br><br>
-            <a href="#top"><img src="./home.png" alt="Home">Home</a>
+            <a href="https://github.com/sthaaayush"><img src="./github.png" alt="github" class="footer_icon"> GitHub</a>
+            <a href="mailto:aayushstha20#gmail.com"><img src="./mail.png" alt="Mail" class="footer_icon"> Email Me
+                here</a>
+            <a href="#top" class="home_icon"><img src="./home.png" alt="Home" class="footer_icon">Home</a>
         </address>
     </div>
 </body>
